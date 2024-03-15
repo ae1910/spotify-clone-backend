@@ -36,7 +36,7 @@ const stateKey = 'authState';
 
 app.get('/login', async (req, res) => {
     const state = generateRandomString(16);
-    const scope = 'user-read-email user-read-private user-library-read user-library-modify user-read-playback-position user-top-read user-read-recently-played user-follow-read playlist-modify-public playlist-modify-private playlist-read-collaborative playlist-read-private user-read-currently-playing user-modify-playback-state user-read-playback-state';
+    const scope = 'streaming user-read-email user-read-private user-library-read user-library-modify user-read-playback-position user-top-read user-read-recently-played user-follow-read playlist-modify-public playlist-modify-private playlist-read-collaborative playlist-read-private user-read-currently-playing user-modify-playback-state user-read-playback-state';
 
     res.cookie(stateKey, state);
 
